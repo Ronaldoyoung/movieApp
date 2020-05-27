@@ -24,8 +24,14 @@ function LandingPage() {
 
     return (
         <div style={{ width: '100%', margin: '0'}}>
+            {MainMovieImage &&
+                <MainImage
+                    image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
+                    title={MainMovieImage.original_title}
+                    text={MainMovieImage.overview}
+                />
 
-            <MainImage image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}/>
+            }
 
             <div style={{ width: '85%', margin: '1rem auto'}}>
                 <h2>Movies by latest</h2>
