@@ -13,6 +13,7 @@ import Footer from "./views/Footer/Footer"
 //false  logged in user can't go inside
 
 function App() {
+  console.log('App.js Start');
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
       <NavBar />
