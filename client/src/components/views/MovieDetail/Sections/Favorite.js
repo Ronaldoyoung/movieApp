@@ -6,7 +6,7 @@ const Favorite = (props) => {
 
   const movieId = props.movieId;
   const userFrom = props.userFrom;
-  const movieTitle = props.movieTitle;
+  const movieTitle = props.movieInfo.original_title;
   const moviePost = props.movieInfo.backdrop_path;
   const movieRunTime = props.movieInfo.runtime;
 
@@ -58,6 +58,7 @@ const Favorite = (props) => {
           }
         })
     } else {
+      console.log('#### ' , variables);
       Axios.post('/api/favorite/addToFavorite', variables)
         .then(response => {
           if(response.data.success){

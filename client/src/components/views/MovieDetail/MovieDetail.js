@@ -22,7 +22,7 @@ const MovieDetail = (props) => {
     fetch(endpointInfo)
       .then(response => response.json())
       .then(response => {
-        console.log(response)
+        console.log('@@@@ ' , response)
         setMovie(response)
       })
 
