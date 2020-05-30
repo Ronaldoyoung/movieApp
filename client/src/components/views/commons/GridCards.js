@@ -2,7 +2,6 @@ import React from 'react';
 import { Col } from 'antd';
 
 function GridCards (props){
-  console.log('asdfadf' , props);
 
   if(props.landingPage) {
     return (

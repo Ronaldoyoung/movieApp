@@ -14,6 +14,8 @@ const config = require("./config/key");
 //   .then(() => console.log("DB connected"))
 //   .catch(err => console.error(err));
 
+console.log('@@@@ ~~~~');
+
 const mongoose = require("mongoose");
 const connect = mongoose.connect(config.mongoURI,
   {
@@ -21,7 +23,7 @@ const connect = mongoose.connect(config.mongoURI,
     useCreateIndex: true, useFindAndModify: false
   })
   .then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('mongo sibal error',err));
 
 app.use(cors())
 
@@ -43,7 +45,7 @@ app.use('/uploads', express.static('uploads'));
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
 
-  // Set static folder   
+  // Set static folder
   // All the javascript and css files will be read and served from this folder
   app.use(express.static("client/build"));
 
