@@ -53,7 +53,7 @@ const MovieDetail = (props) => {
       {/* Body */}
       <div style={{ width: '85%', margin: '1rem auto' }}>
       <div style={{ display: 'flex', justifyContent:'flex-ned' }}>
-        {/* <Favorite movieInfo={Movie} movieId={movieId} userFrom={} /> */}
+        <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
       </div>
 
 
