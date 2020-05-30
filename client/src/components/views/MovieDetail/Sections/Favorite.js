@@ -18,14 +18,14 @@ const Favorite = (props) => {
 
     Axios.post('/api/favorite/favoriteNumber', variables)
       .then(response => {
+        console.log(response.data);
         if(response.data.success){
-
         }else{
           alert('숫자 정보를 가져오는데 실패했습니다.')
         }
       })
 
-  }, [input]);
+  }, []);
 
 
   return (
